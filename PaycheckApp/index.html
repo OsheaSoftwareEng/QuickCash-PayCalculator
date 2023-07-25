@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/index.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="section-div">
+		<div id="graph-logo" class="display-none">
+			<img src="./img/QuickPay-Logo.png">
+		</div>
+		<div id="original-logo" class="logo">
+			<img src="./img/QuickPay-Logo.png">
+		</div>
+		<div class="display-none pay-amount" id="success-form">
+			<h1>Weekly Net Amount</h1>
+			<div id="resultsPrinted"></div>
+			<div class="chart-container">
+				<canvas id="myChart"></canvas>
+			</div>
+			<button id="reset-button">Reset</button>
+		</div>
+
+		<div id="pay-form">
+			<h2 class="header">Weekly Pay </br> Calculator</h2>
+			<div class="form">
+				<p class="header-text">Pay Rate</p>
+				<input id="wage" type="text" name="wage" placeholder="Enter Hourly Wage"></input>
+				<p class="header-text">Hours</p>
+				<input id="hours" type="text" name="hours" placeholder="Enter Hours Worked"></input>
+				<button id="calButton">Calculate</button>
+			</div>
+
+		</div>
+	</div>
+	<!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="./js/index.js"></script>
+
+</body>
+</html>
