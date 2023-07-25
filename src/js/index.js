@@ -117,6 +117,7 @@ let graphLogo = document.getElementById('graph-logo');
 button.addEventListener('click', function () {
   let wage = document.getElementById('wage').value;
   let hours = document.getElementById('hours').value;
+  window.scrollTo(0, 0);
 
   graphLogo.classList.remove('display-none');
   logo.classList.add('display-none');
