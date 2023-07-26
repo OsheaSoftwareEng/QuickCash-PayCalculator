@@ -152,6 +152,9 @@ button.addEventListener('click', function () {
   let wage = document.getElementById('wage').value;
   let hours = document.getElementById('hours').value;
 
+  //scroll to top of page when button is clicked
+  window.scrollTo(0, 0);
+
   //un-hiding and hiding forms after users clicks calculate
   graphLogo.classList.remove('display-none');
   logo.classList.add('display-none');
