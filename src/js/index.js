@@ -164,10 +164,14 @@ button.addEventListener('click', function () {
   form.classList.add('display-none');
   payAmount.classList.remove('display-none');
 
-  //dynamic inner html logic from calculateWage object
+  //temporary fix duplicated code to show correct take home amount
   results.innerHTML =
     '$' + calculateWage.weeklyPayCalculator(wage, hours).toFixed(2);
 
+  results.innerHTML =
+    '$' + calculateWage.weeklyPayCalculator(wage, hours).toFixed(2);
+
+  //dynamic inner html logic from calculateWage object
   earnings.innerHTML =
     'Gross: ' +
     '$' +
