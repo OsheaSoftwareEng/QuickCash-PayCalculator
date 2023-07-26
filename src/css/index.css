@@ -530,6 +530,15 @@ h1 {
     width: 295px;
     margin-left: 18px;
   }
+
+  .logo {
+    margin-left: -60px;
+  }
+
+  .pay-break {
+    position: relative;
+    bottom: 510px;
+  }
 }
 
 /*375 pixels */
