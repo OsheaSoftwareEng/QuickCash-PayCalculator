@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/index.css">
-	<title>Document</title>
+	<title>Quick Pay Pay Calculator</title>
 </head>
 <body>
 	<div class="section-div">
@@ -16,10 +16,15 @@
 			<img src="./img/QuickPay-Logo.png">
 		</div>
 		<div class="display-none pay-amount" id="success-form">
-			<h1>Weekly Net Amount</h1>
-			<div id="resultsPrinted"></div>
+			<h1>Your Take Home</h1>
+			<p id="results-printed"></p>
 			<div class="chart-container">
 				<canvas id="myChart"></canvas>
+			</div>
+			<div class="pay-break">
+				<span id="earnings"></span>
+				<span id="taxes"></span>
+				<span id="take-home"></span>
 			</div>
 			<button id="reset-button">Reset</button>
 		</div>
@@ -36,7 +41,6 @@
 
 		</div>
 	</div>
-	<!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="./js/index.js"></script>
 
