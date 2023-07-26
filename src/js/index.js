@@ -1,3 +1,4 @@
+//logic to get page to scroll to the top center
 document.body.scrollTop = document.body.scrollIntoView({
   behavior: 'smooth',
   inline: 'center',
@@ -59,6 +60,7 @@ let calculateWage = {
       return grossPay - grossPay * totalWithdrawals;
     }
   },
+  //total taxes calculation
   totalTaxes: function (n, hr) {
     employeeWage = n;
     employeeHours = hr;
@@ -75,7 +77,7 @@ let calculateWage = {
       return grossPay * totalWithdrawals;
     }
   },
-
+  //function for gross amount into pie chart
   pieChartGross: function (n, hr) {
     employeeWage = n;
     employeeHours = hr;
@@ -90,6 +92,7 @@ let calculateWage = {
       return grossPay;
     }
   },
+  //function for fica taxes inputed into pie chart
   pieChartFicaTaxes: function (n, hr) {
     employeeWage = n;
     employeeHours = hr;
@@ -98,6 +101,7 @@ let calculateWage = {
     let finalTax = ficaTaxes / 100;
     return grossPay * finalTax;
   },
+  //function for federal taxes inputted into pie chart
   pieChartFederalTax: function (n, hr) {
     employeeWage = n;
     employeeHours = hr;
@@ -105,6 +109,7 @@ let calculateWage = {
     let fedTax = this.federalTax / 100;
     return grossPay * fedTax;
   },
+  //function for state taxes put in to pie chart
   pieChartStateTax: function (n, hr) {
     employeeWage = n;
     employeeHours = hr;
@@ -112,6 +117,7 @@ let calculateWage = {
     let stateTaxes = this.stateTax / 100;
     return grossPay * stateTaxes;
   },
+  //function for overtime amount inside part chart
   pieChartOvertime: function (n, hr) {
     employeeWage = n;
     employeeHours = hr;
@@ -127,6 +133,7 @@ let calculateWage = {
   }
 };
 
+//declarations to get document nodes for button
 const ctx = document.getElementById('myChart');
 let button = document.querySelector('#calButton');
 let results = document.querySelector('#results-printed');
@@ -140,16 +147,25 @@ let earnings = document.getElementById('earnings');
 let taxes = document.getElementById('taxes');
 let takeHome = document.getElementById('take-home');
 
+//calculate button that takes uses weekly pay function and generates chart.
 button.addEventListener('click', function () {
   let wage = document.getElementById('wage').value;
   let hours = document.getElementById('hours').value;
-  window.scrollTo(0, 0);
 
+  //scroll to inputted for new page reload
+  document.body.scrollTop = document.body.scrollIntoView({
+    behavior: 'smooth',
+    inline: 'center',
+    block: 'center'
+  });
+
+  //un-hiding and hiding forms after users clicks calculate
   graphLogo.classList.remove('display-none');
   logo.classList.add('display-none');
   form.classList.add('display-none');
   payAmount.classList.remove('display-none');
 
+  //dynamic inner html logic from calculateWage object
   results.innerHTML =
     '$' + calculateWage.weeklyPayCalculator(wage, hours).toFixed(2);
 
@@ -167,6 +183,7 @@ button.addEventListener('click', function () {
     '$' +
     calculateWage.weeklyPayCalculator(wage, hours).toFixed(2);
 
+  //data from calculateWage that populates the pie chart
   const payGraphInfo = [
     calculateWage.pieChartGross(wage, hours),
     calculateWage.pieChartFicaTaxes(wage, hours).toFixed(2),
@@ -174,7 +191,7 @@ button.addEventListener('click', function () {
     calculateWage.pieChartStateTax(wage, hours).toFixed(2),
     calculateWage.pieChartOvertime(wage, hours).toFixed(2)
   ];
-
+  //creating a pie chart when you hit the calculate button
   new Chart(ctx, {
     type: 'doughnut',
     data: {
@@ -215,8 +232,8 @@ button.addEventListener('click', function () {
   });
 });
 
+//reset button that just reloads the window
 let reset = document.querySelector('#reset-button');
-
 reset.addEventListener('click', function () {
   window.location.reload();
 });
