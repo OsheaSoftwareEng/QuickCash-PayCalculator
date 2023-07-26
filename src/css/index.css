@@ -1,3 +1,11 @@
+.pay-break {
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
 img {
   width: 43%;
   min-width: 500px;
@@ -35,7 +43,6 @@ body {
   width: 100%;
   height: 1000px;
   background-color: #051726;
-  overflow: hidden;
 }
 .header-text {
   font-weight: bold;
@@ -64,7 +71,7 @@ h1 {
   position: relative;
   top: -290px;
   border: solid 2px #81ffd9;
-  height: 580px;
+  height: 620px;
   margin-top: -1px;
 }
 
@@ -124,7 +131,7 @@ h1 {
   transition: 0.3s;
 }
 
-#resultsPrinted {
+#results-printed {
   padding: 25px;
   font-size: 50px;
   text-align: center;
@@ -213,13 +220,13 @@ h1 {
   }
 }
 
-@media (max-width: 1477px) {
+@media (max-width: 1440px) {
   img {
     padding: 40px;
   }
 
   .chart-container {
-    margin-left: 40px;
+    margin-left: 200px;
     position: relative;
     bottom: 50px;
     height: 100vh;
@@ -227,24 +234,24 @@ h1 {
   }
 
   #reset-button {
-    margin-left: 300px;
+    margin-left: 490px;
     position: relative;
-    bottom: 450px;
+    bottom: -30px;
   }
 
   #graph-logo {
     margin-left: -10px;
-    margin-top: -25px;
+    margin-top: -50px;
     padding: 2px;
     position: relative;
     bottom: 65px;
   }
 
   #success-form {
-    margin-left: 12px;
+    margin-left: 20px;
     height: 1150px;
     margin-top: -45px;
-    width: 890px;
+    width: 1300px;
   }
 
   h1 {
@@ -254,7 +261,7 @@ h1 {
     padding: 10px;
   }
 
-  #resultsPrinted {
+  #results-printed {
     position: relative;
     bottom: 35px;
     right: 0px;
@@ -267,13 +274,18 @@ h1 {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .chart-container {
     margin-left: 10px;
     position: relative;
     bottom: 50px;
     height: 100vh;
     width: 80vw;
+  }
+
+  .pay-break {
+    position: relative;
+    bottom: 500px;
   }
 
   #reset-button {
@@ -304,7 +316,56 @@ h1 {
     padding: 10px;
   }
 
-  #resultsPrinted {
+  #results-printed {
+    position: relative;
+    bottom: 35px;
+    right: 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .chart-container {
+    margin-left: -10px;
+    position: relative;
+    bottom: 50px;
+    height: 100vh;
+    width: 80vw;
+  }
+
+  .pay-break {
+    position: relative;
+    bottom: 50px;
+  }
+
+  #reset-button {
+    margin-left: 250px;
+    position: relative;
+    bottom: 0px;
+  }
+
+  #graph-logo {
+    margin-left: -50px;
+    margin-top: -25px;
+    padding: 2px;
+    position: relative;
+    bottom: 65px;
+  }
+
+  #success-form {
+    margin-left: 12px;
+    height: 1150px;
+    margin-top: -45px;
+    width: 800px;
+  }
+
+  h1 {
+    position: relative;
+    bottom: 15px;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  #results-printed {
     position: relative;
     bottom: 35px;
     right: 0px;
@@ -320,10 +381,15 @@ h1 {
     width: 80vw;
   }
 
+  .pay-break {
+    position: relative;
+    bottom: 400px;
+  }
+
   #reset-button {
     margin-left: 180px;
     position: relative;
-    bottom: 450px;
+    bottom: 350px;
   }
 
   #graph-logo {
@@ -348,7 +414,7 @@ h1 {
     padding: 10px;
   }
 
-  #resultsPrinted {
+  #results-printed {
     position: relative;
     bottom: 35px;
     right: 0px;
@@ -395,7 +461,7 @@ h1 {
     padding: 10px;
   }
 
-  #resultsPrinted {
+  #results-printed {
     position: relative;
     bottom: 35px;
     right: 0px;
@@ -411,8 +477,13 @@ h1 {
     height: auto;
   }
 
+  .pay-break {
+    position: relative;
+    bottom: 520px;
+  }
+
   .chart-container {
-    margin-left: -72px;
+    margin-left: -20px;
     position: relative;
     bottom: 50px;
     height: 100vh;
@@ -420,13 +491,13 @@ h1 {
   }
 
   #reset-button {
-    margin-left: -25px;
+    margin-left: 20px;
     position: relative;
-    bottom: 420px;
+    bottom: 500px;
   }
 
   #graph-logo {
-    margin-left: -92px;
+    margin-left: -70px;
     margin-top: -25px;
     padding: 2px;
     position: relative;
@@ -437,7 +508,7 @@ h1 {
     margin-left: 12px;
     height: 645px;
     margin-top: -45px;
-    width: 270px;
+    width: 335px;
   }
 
   h1 {
@@ -447,25 +518,47 @@ h1 {
     padding: 10px;
   }
 
-  #resultsPrinted {
+  #results-printed {
     position: relative;
     bottom: 35px;
     right: 0px;
   }
 }
 
+@media (max-width: 393px) {
+  #success-form {
+    width: 295px;
+    margin-left: 18px;
+  }
+}
+
+/*375 pixels */
 @media (max-width: 375px) {
   .logo {
-    margin-left: -100px;
+    margin-left: -50px;
+    position: relative;
+    bottom: 50px;
+  }
+
+  .pay-break {
+    position: relative;
+    bottom: 330px;
+  }
+
+  #pay-form {
+    position: relative;
+    left: 45px;
+    top: -280px;
   }
 
   img {
     min-width: 480px;
     height: auto;
+    position: relative;
   }
 
   .chart-container {
-    margin-left: -72px;
+    margin-left: -40px;
     position: relative;
     bottom: 50px;
     height: 100vh;
@@ -473,13 +566,13 @@ h1 {
   }
 
   #reset-button {
-    margin-left: -25px;
+    margin-left: 8px;
     position: relative;
     bottom: 330px;
   }
 
   #graph-logo {
-    margin-left: -108px;
+    margin-left: -75px;
     margin-top: -25px;
     padding: 2px;
     position: relative;
@@ -487,10 +580,10 @@ h1 {
   }
 
   #success-form {
-    margin-left: 12px;
+    margin-left: 20px;
     height: 645px;
     margin-top: -45px;
-    width: 230px;
+    width: 300px;
   }
 
   h1 {
@@ -500,7 +593,7 @@ h1 {
     padding: 10px;
   }
 
-  #resultsPrinted {
+  #results-printed {
     position: relative;
     bottom: 35px;
     right: 0px;
@@ -510,6 +603,11 @@ h1 {
 @media (max-width: 360px) {
   img {
     min-width: 415px;
+  }
+
+  .pay-break {
+    position: relative;
+    bottom: 400px;
   }
 
   .logo {
@@ -529,7 +627,7 @@ h1 {
   #reset-button {
     margin-left: -37px;
     position: relative;
-    bottom: 300px;
+    bottom: 370px;
   }
 
   #graph-logo {
@@ -541,10 +639,10 @@ h1 {
   }
 
   #success-form {
-    margin-left: 2px;
+    margin-left: 5px;
     height: 590px;
     margin-top: -25px;
-    width: 230px;
+    width: 220px;
   }
 
   h1 {
@@ -554,7 +652,7 @@ h1 {
     padding: 5px;
   }
 
-  #resultsPrinted {
+  #results-printed {
     position: relative;
     bottom: 35px;
     right: 10px;
@@ -608,7 +706,7 @@ h1 {
       font-size: 20px;
     }
 
-    #resultsPrinted {
+    #results-printed {
       position: relative;
       bottom: 35px;
       right: 15px;
