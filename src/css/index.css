@@ -542,7 +542,7 @@ h1 {
 
   .pay-break {
     position: relative;
-    bottom: 330px;
+    bottom: 300px;
   }
 
   #pay-form {
@@ -568,7 +568,7 @@ h1 {
   #reset-button {
     margin-left: 8px;
     position: relative;
-    bottom: 330px;
+    bottom: 290px;
   }
 
   #graph-logo {
