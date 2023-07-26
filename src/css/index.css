@@ -517,6 +517,20 @@ img {
   }
 }
 
+/*Media 430 */
+
+@media (max-width: 430px) {
+  #reset-button {
+    margin-left: 20px;
+    position: relative;
+    bottom: 540px;
+  }
+  .pay-break {
+    position: relative;
+    bottom: 570px;
+  }
+}
+
 /*Media 414px */
 
 @media (max-width: 414px) {
