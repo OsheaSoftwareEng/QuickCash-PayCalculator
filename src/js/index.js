@@ -153,7 +153,10 @@ button.addEventListener('click', function () {
   let hours = document.getElementById('hours').value;
 
   //scroll to top of page when button is clicked
-  window.scrollTo(0, 0);
+  window.scrollTo({
+    top: 100,
+    left: 50
+  });
 
   //un-hiding and hiding forms after users clicks calculate
   graphLogo.classList.remove('display-none');
