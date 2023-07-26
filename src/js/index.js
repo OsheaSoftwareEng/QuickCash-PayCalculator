@@ -154,7 +154,7 @@ button.addEventListener('click', function () {
 
   //scroll to top of page when button is clicked
   window.scrollTo({
-    top: 100,
+    top: 50,
     left: 50
   });
 
