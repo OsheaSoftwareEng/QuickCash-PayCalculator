@@ -1,3 +1,5 @@
+document.body.scrollTop = document.documentElement.scrollTop = 0;
+
 let calculateWage = {
   timeHalf: 1.5,
   straightTime: 40,
@@ -13,9 +15,8 @@ let calculateWage = {
   federalTax: 0,
 
   weeklyPayCalculator: function (n, hr) {
-    var employeeWage = n;
+    let employeeWage = n;
     let employeeHours = hr;
-    let wage = document.getElementById('wage').value;
 
     let withdrawals =
       this.medicare + this.socialSecurity + this.stateTax + this.federalTax;
@@ -31,6 +32,8 @@ let calculateWage = {
 
     let overtimePay = overtimeGrossPay + straightTimeGross;
 
+    //Tax bracket conditional logic
+    let wage = document.getElementById('wage').value;
     if (wage > 120 && wage < 302) {
       this.federalTax = this.sixFederalTax;
     } else if (wage > 94.8 && wage < 121) {
@@ -45,14 +48,30 @@ let calculateWage = {
       this.federalTax = this.oneFederalTax;
     }
 
+    //conditional for if hours go over 40
     if (employeeHours > this.straightTime) {
-      return (
-        overtimeGrossPay + straightTimeGross - overtimePay * totalWithdrawals
-      );
+      return overtimePay - overtimePay * totalWithdrawals;
     } else {
       return grossPay - grossPay * totalWithdrawals;
     }
   },
+  totalTaxes: function (n, hr) {
+    employeeWage = n;
+    employeeHours = hr;
+    grossPay = employeeWage * employeeHours;
+    timeHalfWage = employeeWage * this.timeHalf;
+    overtimeGrossPay = (employeeHours - this.straightTime) * timeHalfWage;
+    overtimePay = overtimeGrossPay + straightTimeGross;
+    withdrawals =
+      this.medicare + this.socialSecurity + this.stateTax + this.federalTax;
+    totalWithdrawals = withdrawals / 100;
+    if (employeeHours > this.straightTime) {
+      return overtimePay * totalWithdrawals;
+    } else {
+      return grossPay * totalWithdrawals;
+    }
+  },
+
   pieChartGross: function (n, hr) {
     employeeWage = n;
     employeeHours = hr;
@@ -106,13 +125,16 @@ let calculateWage = {
 
 const ctx = document.getElementById('myChart');
 let button = document.querySelector('#calButton');
-let results = document.querySelector('#resultsPrinted');
+let results = document.querySelector('#results-printed');
 let form = document.querySelector('#pay-form');
 let payAmount = document.querySelector('.pay-amount');
 let wage = document.getElementById('wage').value;
 let hours = document.getElementById('hours').value;
 let logo = document.getElementById('original-logo');
 let graphLogo = document.getElementById('graph-logo');
+let earnings = document.getElementById('earnings');
+let taxes = document.getElementById('taxes');
+let takeHome = document.getElementById('take-home');
 
 button.addEventListener('click', function () {
   let wage = document.getElementById('wage').value;
@@ -121,11 +143,25 @@ button.addEventListener('click', function () {
 
   graphLogo.classList.remove('display-none');
   logo.classList.add('display-none');
-
   form.classList.add('display-none');
   payAmount.classList.remove('display-none');
+
   results.innerHTML =
     '$' + calculateWage.weeklyPayCalculator(wage, hours).toFixed(2);
+
+  earnings.innerHTML =
+    'Gross: ' +
+    '$' +
+    calculateWage.pieChartGross(wage, hours).toFixed(2) +
+    ' |';
+
+  taxes.innerHTML =
+    'Taxes: ' + '-$' + calculateWage.totalTaxes(wage, hours).toFixed(2) + ' |';
+
+  takeHome.innerHTML =
+    'Take Home: ' +
+    '$' +
+    calculateWage.weeklyPayCalculator(wage, hours).toFixed(2);
 
   const payGraphInfo = [
     calculateWage.pieChartGross(wage, hours),
