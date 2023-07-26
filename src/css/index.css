@@ -532,6 +532,13 @@ img {
     position: relative;
     bottom: 455px;
   }
+  #graph-logo {
+    margin-left: -45px;
+    margin-top: -25px;
+    padding: 2px;
+    position: relative;
+    bottom: 65px;
+  }
 }
 
 /*Media 414px */
