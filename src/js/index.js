@@ -152,13 +152,6 @@ button.addEventListener('click', function () {
   let wage = document.getElementById('wage').value;
   let hours = document.getElementById('hours').value;
 
-  //scroll to inputted for new page reload
-  document.body.scrollTop = document.body.scrollIntoView({
-    behavior: 'smooth',
-    inline: 'center',
-    block: 'center'
-  });
-
   //un-hiding and hiding forms after users clicks calculate
   graphLogo.classList.remove('display-none');
   logo.classList.add('display-none');
