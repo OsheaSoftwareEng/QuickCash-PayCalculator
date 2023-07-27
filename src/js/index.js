@@ -1,9 +1,9 @@
 //logic to get page to scroll to the top center
-document.body.scrollTop = document.body.scrollIntoView({
-  behavior: 'smooth',
-  inline: 'center',
-  block: 'center'
-});
+// document.body.scrollTop = document.body.scrollIntoView({
+//   behavior: 'smooth',
+//   inline: 'center',
+//   block: 'center'
+// });
 
 let calculateWage = {
   timeHalf: 1.5,
