@@ -495,6 +495,10 @@ img {
     bottom: 35px;
     right: 0px;
   }
+
+  .pay-break {
+    margin-top: 19px;
+  }
 }
 
 /*Media 430 */
@@ -586,7 +590,7 @@ img {
   }
 
   .pay-break {
-    margin-top: -40px;
+    margin-top: 52px;
   }
 }
 
@@ -598,7 +602,7 @@ img {
   }
 
   .logo {
-    margin-left: -85px;
+    margin-left: -70px;
     position: relative;
     bottom: 10px;
   }
@@ -620,10 +624,10 @@ img {
   }
 
   #success-form {
-    margin-left: 25px;
+    margin-left: 14px;
     height: 665px;
     margin-top: -25px;
-    width: 230px;
+    width: 260px;
   }
 
   h1 {
@@ -645,7 +649,7 @@ img {
     top: -230px;
   }
   .pay-break {
-    margin-top: 130px;
+    margin-top: 183px;
   }
 }
 
