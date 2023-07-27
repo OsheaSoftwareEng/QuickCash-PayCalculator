@@ -19,6 +19,7 @@ h1 {
 
 .pay-break {
   text-align: center;
+  padding: 10px;
 }
 
 /*Image styles for logo*/
@@ -174,7 +175,8 @@ img {
   position: relative;
   left: 65px;
   text-align: center;
-  margin-left: 60px;
+  position: relative;
+  left: 7px;
 }
 
 .header-text {
@@ -216,19 +218,16 @@ img {
   img {
     padding: 40px;
   }
-
+  .pay-break {
+    position: relative;
+    bottom: 490px;
+  }
   .chart-container {
     margin-left: 200px;
     position: relative;
     bottom: 50px;
     height: 100vh;
-    width: 80vw;
-  }
-
-  #reset-button {
-    margin-left: 490px;
-    position: relative;
-    bottom: -30px;
+    width: 30vw;
   }
 
   #graph-logo {
@@ -240,10 +239,10 @@ img {
   }
 
   #success-form {
-    margin-left: 20px;
-    height: 1150px;
+    margin-left: 280px;
+    height: 620px;
     margin-top: -45px;
-    width: 1300px;
+    width: 800px;
   }
 
   h1 {
@@ -264,22 +263,17 @@ img {
 
 @media (max-width: 1366px) {
   #success-form {
-    margin-left: 60px;
-    height: 1150px;
+    margin-left: 280px;
+    height: 620px;
     margin-top: -45px;
-    width: 1100px;
+    width: 800px;
   }
   .chart-container {
-    margin-left: 168px;
+    margin-left: 200px;
     position: relative;
     bottom: 50px;
     height: 100vh;
-    width: 80vw;
-  }
-  #reset-button {
-    margin-left: 400px;
-    position: relative;
-    bottom: -20px;
+    width: 30vw;
   }
 }
 
@@ -292,23 +286,18 @@ img {
 }
 /*Media 1024px */
 @media (max-width: 1024px) {
+  #success-form {
+    margin-left: 50px;
+    height: 620px;
+    margin-top: -45px;
+    width: 800px;
+  }
   .chart-container {
-    margin-left: 90px;
+    margin-left: 200px;
     position: relative;
     bottom: 50px;
     height: 100vh;
-    width: 80vw;
-  }
-
-  .pay-break {
-    position: relative;
-    bottom: 50px;
-  }
-
-  #reset-button {
-    margin-left: 250px;
-    position: relative;
-    bottom: 0px;
+    width: 40vw;
   }
 
   #graph-logo {
@@ -317,13 +306,6 @@ img {
     padding: 2px;
     position: relative;
     bottom: 65px;
-  }
-
-  #success-form {
-    margin-left: 60px;
-    height: 1150px;
-    margin-top: -45px;
-    width: 800px;
   }
 
   h1 {
@@ -342,23 +324,18 @@ img {
 
 /*Media 820px */
 @media (max-width: 820px) {
+  #success-form {
+    margin-left: 70px;
+    height: 620px;
+    margin-top: -45px;
+    width: 600px;
+  }
   .chart-container {
-    margin-left: 20px;
+    margin-left: 75px;
     position: relative;
     bottom: 50px;
     height: 100vh;
-    width: 80vw;
-  }
-
-  .pay-break {
-    position: relative;
-    bottom: 500px;
-  }
-
-  #reset-button {
-    margin-left: 200px;
-    position: relative;
-    bottom: 450px;
+    width: 55vw;
   }
 
   #graph-logo {
@@ -367,13 +344,6 @@ img {
     padding: 2px;
     position: relative;
     bottom: 65px;
-  }
-
-  #success-form {
-    margin-left: 12px;
-    height: 1150px;
-    margin-top: -45px;
-    width: 690px;
   }
 
   h1 {
@@ -393,23 +363,18 @@ img {
 /*Media 768px */
 
 @media (max-width: 768px) {
+  #success-form {
+    margin-left: 40px;
+    height: 620px;
+    margin-top: -45px;
+    width: 600px;
+  }
   .chart-container {
-    margin-left: 10px;
+    margin-left: 90px;
     position: relative;
     bottom: 50px;
     height: 100vh;
-    width: 80vw;
-  }
-
-  .pay-break {
-    position: relative;
-    bottom: 400px;
-  }
-
-  #reset-button {
-    margin-left: 180px;
-    position: relative;
-    bottom: 350px;
+    width: 55vw;
   }
 
   #graph-logo {
@@ -418,13 +383,6 @@ img {
     padding: 2px;
     position: relative;
     bottom: 65px;
-  }
-
-  #success-form {
-    margin-left: 12px;
-    height: 1150px;
-    margin-top: -45px;
-    width: 630px;
   }
 
   h1 {
@@ -444,23 +402,18 @@ img {
 /* Media 540px */
 
 @media (max-width: 540px) {
+  #success-form {
+    margin-left: 60px;
+    height: 620px;
+    margin-top: -45px;
+    width: 350px;
+  }
   .chart-container {
-    margin-left: 10px;
+    margin-left: -10px;
     position: relative;
     bottom: 50px;
     height: 100vh;
-    width: 80vw;
-  }
-
-  .pay-break {
-    position: relative;
-    bottom: 330px;
-  }
-
-  #reset-button {
-    margin-left: 80px;
-    position: relative;
-    bottom: 330px;
+    width: 70vw;
   }
 
   #graph-logo {
@@ -469,13 +422,6 @@ img {
     padding: 2px;
     position: relative;
     bottom: 65px;
-  }
-
-  #success-form {
-    margin-left: 12px;
-    height: 1150px;
-    margin-top: -45px;
-    width: 450px;
   }
 
   h1 {
@@ -506,14 +452,8 @@ img {
     width: 90vw;
   }
 
-  #reset-button {
-    margin-left: 22px;
-    position: relative;
-    bottom: 420px;
-  }
-
   #graph-logo {
-    margin-left: -92px;
+    margin-left: -65px;
     margin-top: -25px;
     padding: 2px;
     position: relative;
@@ -547,15 +487,6 @@ img {
   .logo {
     margin-left: -95px;
   }
-  #reset-button {
-    margin-left: 20px;
-    position: relative;
-    bottom: 450px;
-  }
-  .pay-break {
-    position: relative;
-    bottom: 455px;
-  }
   #graph-logo {
     margin-left: -60px;
     margin-top: -25px;
@@ -564,10 +495,17 @@ img {
     bottom: 65px;
   }
   #success-form {
-    margin-left: 12px;
+    margin-left: 30px;
     height: 645px;
     margin-top: -45px;
     width: 320px;
+  }
+  .chart-container {
+    margin-left: -32px;
+    position: relative;
+    bottom: 50px;
+    height: 100vh;
+    width: 90vw;
   }
 }
 
@@ -582,23 +520,12 @@ img {
     height: auto;
   }
 
-  .pay-break {
-    position: relative;
-    bottom: 520px;
-  }
-
   .chart-container {
     margin-left: -20px;
     position: relative;
     bottom: 50px;
     height: 100vh;
     width: 90vw;
-  }
-
-  #reset-button {
-    margin-left: 20px;
-    position: relative;
-    bottom: 500px;
   }
 
   #graph-logo {
@@ -613,7 +540,7 @@ img {
     margin-left: 12px;
     height: 645px;
     margin-top: -45px;
-    width: 335px;
+    width: 325px;
   }
 
   h1 {
@@ -643,8 +570,7 @@ img {
   }
 
   .pay-break {
-    position: relative;
-    bottom: 530px;
+    margin-top: -40px;
   }
 }
 
@@ -654,11 +580,6 @@ img {
     margin-left: -50px;
     position: relative;
     bottom: 50px;
-  }
-
-  .pay-break {
-    position: relative;
-    bottom: 300px;
   }
 
   #pay-form {
@@ -679,12 +600,6 @@ img {
     bottom: 50px;
     height: 100vh;
     width: 100vw;
-  }
-
-  #reset-button {
-    margin-left: 8px;
-    position: relative;
-    bottom: 290px;
   }
 
   #graph-logo {
@@ -723,11 +638,6 @@ img {
     min-width: 415px;
   }
 
-  .pay-break {
-    position: relative;
-    bottom: 400px;
-  }
-
   .logo {
     margin-left: -85px;
     position: relative;
@@ -740,12 +650,6 @@ img {
     bottom: 50px;
     height: 100vh;
     width: 100vw;
-  }
-
-  #reset-button {
-    margin-left: -20px;
-    position: relative;
-    bottom: 370px;
   }
 
   #graph-logo {
@@ -803,14 +707,12 @@ img {
       width: 100vw;
     }
 
-    #reset-button {
-      margin-left: -40px;
-      position: relative;
-      bottom: 290px;
+    .pay-break {
+      margin-top: -80px;
     }
 
     #graph-logo {
-      margin-left: -100px;
+      margin-left: -70px;
       margin-top: -8px;
       padding: 2px;
       position: relative;
@@ -818,8 +720,8 @@ img {
     }
 
     #success-form {
-      margin-left: -0px;
-      height: 427px;
+      margin-left: 30px;
+      height: 590px;
       margin-top: -25px;
       width: 200px;
     }
