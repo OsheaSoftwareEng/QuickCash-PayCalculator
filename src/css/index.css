@@ -320,6 +320,10 @@ img {
     bottom: 35px;
     right: 0px;
   }
+
+  .pay-break {
+    margin-top: 280px;
+  }
 }
 
 /*Media 820px */
@@ -357,6 +361,10 @@ img {
     position: relative;
     bottom: 35px;
     right: 0px;
+  }
+
+  .pay-break {
+    margin-top: -265px;
   }
 }
 
@@ -397,6 +405,10 @@ img {
     bottom: 35px;
     right: 0px;
   }
+
+  .pay-break {
+    margin-top: -130px;
+  }
 }
 
 /* Media 540px */
@@ -435,6 +447,10 @@ img {
     position: relative;
     bottom: 35px;
     right: 0px;
+  }
+
+  .pay-break {
+    margin-top: 110px;
   }
 }
 
@@ -521,7 +537,7 @@ img {
   }
 
   .chart-container {
-    margin-left: -20px;
+    margin-left: -50px;
     position: relative;
     bottom: 50px;
     height: 100vh;
@@ -529,7 +545,7 @@ img {
   }
 
   #graph-logo {
-    margin-left: -70px;
+    margin-left: -80px;
     margin-top: -25px;
     padding: 2px;
     position: relative;
@@ -537,10 +553,10 @@ img {
   }
 
   #success-form {
-    margin-left: 12px;
+    margin-left: 18px;
     height: 645px;
     margin-top: -45px;
-    width: 325px;
+    width: 280px;
   }
 
   h1 {
@@ -574,28 +590,21 @@ img {
   }
 }
 
-/* Media 375px */
+/*Media 375px */
+
 @media (max-width: 375px) {
-  .logo {
-    margin-left: -50px;
-    position: relative;
-    bottom: 50px;
-  }
-
-  #pay-form {
-    position: relative;
-    left: 45px;
-    top: -280px;
-  }
-
   img {
-    min-width: 480px;
-    height: auto;
+    min-width: 415px;
+  }
+
+  .logo {
+    margin-left: -85px;
     position: relative;
+    bottom: 10px;
   }
 
   .chart-container {
-    margin-left: -40px;
+    margin-left: -72px;
     position: relative;
     bottom: 50px;
     height: 100vh;
@@ -603,31 +612,40 @@ img {
   }
 
   #graph-logo {
-    margin-left: -75px;
-    margin-top: -25px;
+    margin-left: -65px;
+    margin-top: -8px;
     padding: 2px;
     position: relative;
     bottom: 65px;
   }
 
   #success-form {
-    margin-left: 20px;
-    height: 645px;
-    margin-top: -45px;
-    width: 300px;
+    margin-left: 25px;
+    height: 665px;
+    margin-top: -25px;
+    width: 230px;
   }
 
   h1 {
     position: relative;
     bottom: 15px;
     font-size: 20px;
-    padding: 10px;
+    padding: 5px;
   }
 
   #results-printed {
     position: relative;
     bottom: 35px;
-    right: 0px;
+    right: 10px;
+  }
+
+  #pay-form {
+    position: relative;
+    left: -0px;
+    top: -230px;
+  }
+  .pay-break {
+    margin-top: 130px;
   }
 }
 
@@ -661,10 +679,10 @@ img {
   }
 
   #success-form {
-    margin-left: 11px;
+    margin-left: 3px;
     height: 590px;
     margin-top: -25px;
-    width: 250px;
+    width: 230px;
   }
 
   h1 {
@@ -685,7 +703,9 @@ img {
     left: -0px;
     top: -230px;
   }
-
+  .pay-break {
+    margin-top: 150px;
+  }
   /* Media 320px */
 
   @media (max-width: 320px) {
@@ -708,7 +728,7 @@ img {
     }
 
     .pay-break {
-      margin-top: -80px;
+      margin-top: 280px;
     }
 
     #graph-logo {
