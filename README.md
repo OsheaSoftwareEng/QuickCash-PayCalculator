@@ -1,6 +1,6 @@
 # QuickCash-PayCalculator
 
-**Link to project:** https://quickpaypc.netlify.app/ <br>
+**Link to project:** https://quickpaypc.com/ <br>
 
 ![alt tag](https://imgur.com/PTJgFdU.png)
 
