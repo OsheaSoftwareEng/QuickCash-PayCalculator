@@ -1,7 +1,9 @@
 /*Generic styles*/
 
 p {
-  margin: 0;
+  position: relative;
+  bottom: 45px;
+  padding: 15px;
 }
 
 body {
@@ -79,6 +81,32 @@ img {
   margin-top: -15px;
 }
 
+#info-card {
+  width: 16%;
+  min-width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: #fcfcfc;
+  padding: 20px 50px 40px;
+  box-shadow: 1px 1px 4px 1px #aaa;
+  font-family: sans-serif;
+  position: relative;
+  top: -240px;
+  border: solid 2px #6edab9;
+  margin-top: -15px;
+}
+
+.info-type {
+  position: relative;
+  bottom: 53px;
+  right: -0px;
+  margin-bottom: 10px;
+}
+
+.header-info {
+  padding: 25px;
+}
+
 #pay-form * {
   box-sizing: border-box;
 }
@@ -129,7 +157,6 @@ img {
 /* button styles */
 
 #calButton {
-  border: none;
   background: rgb(54, 156, 28);
   display: inline-block;
   outline: none;
@@ -137,8 +164,6 @@ img {
   font-size: 14px;
   line-height: 1;
   border-radius: 500px;
-  transition-property: background-color, border-color, color, box-shadow, filter;
-  transition-duration: 0.3s;
   border: 1px solid transparent;
   letter-spacing: 2px;
   min-width: 160px;
@@ -152,7 +177,9 @@ img {
   height: 48px;
   position: absolute;
   position: relative;
-  top: 10px;
+  top: -20px;
+  margin: 10px;
+  right: 10px;
 }
 #reset-button {
   border: none;
@@ -212,6 +239,15 @@ img {
   img {
     padding: 25px;
   }
+
+  .header-info {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+    position: relative;
+    bottom: 50px;
+  }
 }
 
 /* Media 1440px */
@@ -258,6 +294,9 @@ img {
     position: relative;
     bottom: 35px;
     right: 0px;
+  }
+  p {
+    font-size: 14px;
   }
 }
 
