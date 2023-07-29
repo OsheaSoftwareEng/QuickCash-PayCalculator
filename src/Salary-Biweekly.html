@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<link rel="stylesheet" href="./css/bi-weekly.css">
+	<title>QuickPay Pay-Calculator</title>
+</head>
+<body>
+	<!--regular logo and graph logo-->
+	<div class="section-div">
+		<div id="graph-logo" class="display-none">
+			<img src="./img/QuickPay-Logo.png">
+		</div>
+		<div id="original-logo" class="logo">
+			<img src="./img/QuickPay-Logo.png">
+		</div>
+		<!--Calculate page take home pay and results-->
+		<div class="display-none pay-amount" id="success-form">
+			<h1>Your Take Home</h1>
+			<p id="results-printed"></p>
+			<div class="chart-container">
+				<canvas id="myChart"></canvas>
+			</div>
+			<div class="pay-break">
+				<div class="pay-items">
+					<span id="earnings"></span>
+					<span id="taxes"></span>
+					<span id="take-home"></span>
+				</div>
+				<button id="reset-button">Reset</button>
+			</div>
+		</div>
+
+		<!--Pay form for user to enter in payment details-->
+		<div id="pay-form">
+			<h2 class="header">Salary Pay </br> Biweekly Calculator</h2>
+			<div class="form">
+				<p class="header-text">Pay Rate</p>
+				<input id="wage" type="text" name="wage" placeholder="Enter Annual Salary EG. 150200"></input>
+				<button id="calButton">Calculate</button>
+			</div>
+
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="./js/salarybiweekly.js"></script>
+
+</body>
+</html>
