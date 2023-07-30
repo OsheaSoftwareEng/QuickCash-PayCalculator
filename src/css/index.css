@@ -498,7 +498,7 @@ img {
   }
   .pay-type {
     position: relative;
-    right: 9px;
+    right: -11px;
   }
 }
 
