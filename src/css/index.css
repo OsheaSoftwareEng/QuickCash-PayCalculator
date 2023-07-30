@@ -496,6 +496,10 @@ img {
   .pay-break {
     margin-top: 110px;
   }
+  .pay-type {
+    position: relative;
+    right: 9px;
+  }
 }
 
 /*Media 480px */
