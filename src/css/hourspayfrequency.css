@@ -500,6 +500,11 @@ img {
     margin-top: -45px;
     width: 350px;
   }
+  #weekly,
+  #biweekly {
+    position: relative;
+    left: -3px;
+  }
   .chart-container {
     margin-left: -10px;
     position: relative;
