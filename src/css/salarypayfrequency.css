@@ -128,7 +128,7 @@ img {
 
 /* button styles */
 
-#calButton {
+#salarymonthly {
   border: none;
   background: rgb(54, 156, 28);
   display: inline-block;
@@ -154,9 +154,10 @@ img {
   position: relative;
   top: -20px;
   margin: 10px;
+  left: 20px;
 }
 
-#bicalButton {
+#salarybiweekly {
   border: none;
   background: rgb(54, 156, 28);
   display: inline-block;
@@ -183,6 +184,7 @@ img {
   top: -20px;
   margin: 10px;
   padding-top: 9px;
+  left: 20px;
 }
 #reset-button {
   border: none;
@@ -246,6 +248,13 @@ img {
   img {
     padding: 25px;
   }
+
+  #salarymonthly,
+  #salarybiweekly {
+    position: relative;
+    left: -0px;
+    top: -35px;
+  }
 }
 
 /* Media 1440px */
@@ -253,6 +262,13 @@ img {
 @media (max-width: 1440px) {
   img {
     padding: 40px;
+  }
+
+  #salarymonthly,
+  #salarybiweekly {
+    position: relative;
+    left: -13px;
+    top: -35px;
   }
   .pay-break {
     position: relative;
@@ -327,6 +343,12 @@ img {
     height: 620px;
     margin-top: -45px;
     width: 800px;
+  }
+  #salarymonthly,
+  #salarybiweekly {
+    position: relative;
+    left: -29px;
+    top: -35px;
   }
   .chart-container {
     margin-left: 200px;

@@ -128,7 +128,7 @@ img {
 
 /* button styles */
 
-#calButton {
+#calButtons {
   background: rgb(54, 156, 28);
   display: inline-block;
   outline: none;
@@ -151,6 +151,7 @@ img {
   position: relative;
   top: -20px;
   margin: 22px;
+  right: -30px;
 }
 #reset-button {
   border: none;
@@ -198,12 +199,6 @@ img {
 
 /*Media Queries*/
 @media (min-width: 1668px) {
-  #calButton {
-    position: relative;
-    left: 50px;
-    bottom: -5px;
-  }
-
   #success-form {
     position: relative;
     top: -340px;
@@ -213,6 +208,17 @@ img {
 @media (max-width: 1668px) {
   img {
     padding: 25px;
+  }
+
+  #calButtons {
+    position: relative;
+    /* left: 50px; */
+    bottom: -5px;
+  }
+
+  #calButtons {
+    position: relative;
+    right: -5px;
   }
 }
 
@@ -260,6 +266,11 @@ img {
     position: relative;
     bottom: 35px;
     right: 0px;
+  }
+
+  #calButtons {
+    position: relative;
+    right: 13px;
   }
 }
 

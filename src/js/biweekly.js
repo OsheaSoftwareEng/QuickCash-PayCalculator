@@ -223,7 +223,7 @@ let calculateWage = {
 
 //declarations to get document nodes for button
 const ctx = document.getElementById('myChart');
-let button = document.querySelector('#calButton');
+let button = document.querySelector('#calButtons');
 let results = document.querySelector('#results-printed');
 let form = document.querySelector('#pay-form');
 let payAmount = document.querySelector('.pay-amount');

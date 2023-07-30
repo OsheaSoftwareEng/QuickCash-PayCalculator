@@ -156,7 +156,7 @@ img {
   margin: 10px;
 }
 
-#bicalButton {
+#weekly {
   border: none;
   background: rgb(54, 156, 28);
   display: inline-block;
@@ -183,7 +183,39 @@ img {
   top: -20px;
   margin: 10px;
   padding-top: 9px;
+  left: 45px;
 }
+
+#biweekly {
+  border: none;
+  background: rgb(54, 156, 28);
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 17px 48px;
+  color: #81ffd9;
+  background-color: black;
+  height: 48px;
+  position: absolute;
+  position: relative;
+  top: -20px;
+  margin: 10px;
+  padding-top: 9px;
+  left: 35px;
+}
+
 #reset-button {
   border: none;
   display: inline-block;
@@ -246,6 +278,12 @@ img {
   img {
     padding: 25px;
   }
+
+  #weekly,
+  #biweekly {
+    position: relative;
+    left: 21px;
+  }
 }
 
 /* Media 1440px */
@@ -253,6 +291,12 @@ img {
 @media (max-width: 1440px) {
   img {
     padding: 40px;
+  }
+
+  #weekly,
+  #biweekly {
+    position: relative;
+    left: 5px;
   }
   .pay-break {
     position: relative;
