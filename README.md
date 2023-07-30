@@ -2,7 +2,7 @@
 
 **Link to project:** https://quickpaypc.com/ <br>
 
-![alt tag](https://imgur.com/PTJgFdU.png)
+![alt tag](https://imgur.com/CPaoeWB.png)
 
 ## How It's Made:
 
