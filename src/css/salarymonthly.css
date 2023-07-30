@@ -59,6 +59,7 @@ img {
   border: solid 2px #81ffd9;
   height: 620px;
   margin-top: -1px;
+  border-radius: 21px;
 }
 
 #success-form * {
@@ -77,6 +78,7 @@ img {
   top: -240px;
   border: solid 2px #6edab9;
   margin-top: -15px;
+  border-radius: 21px;
 }
 
 #pay-form * {
