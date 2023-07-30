@@ -218,6 +218,42 @@ let calculateWage = {
 
     let totalOvertimeGross = weekOneOverTime + weekTwoOverTime;
     return totalOvertimeGross;
+  },
+  pieChartWeekOne: function (n, hr) {
+    employeeWage = n;
+    employeeHours = hr;
+
+    grossPay = employeeWage * employeeHours;
+
+    timeHalfWage = employeeWage * this.timeHalf;
+    straightTimeGross = employeeWage * this.straightTime;
+
+    overtimeGrossPay = (employeeHours - this.straightTime) * timeHalfWage;
+    overtimePay = overtimeGrossPay + straightTimeGross;
+
+    if (employeeHours > this.straightTime) {
+      return overtimePay;
+    } else {
+      return grossPay;
+    }
+  },
+  pieChartWeekTwo: function (n, hr) {
+    employeeWage = n;
+    employeeHoursTwo = hr;
+
+    grossPayTwo = employeeWage * employeeHoursTwo;
+
+    timeHalfWage = employeeWage * this.timeHalf;
+    straightTimeGross = employeeWage * this.straightTime;
+
+    overtimeGrossPay = (employeeHoursTwo - this.straightTime) * timeHalfWage;
+    overtimePayTwo = overtimeGrossPay + straightTimeGross;
+
+    if (employeeHoursTwo > this.straightTime) {
+      return overtimePayTwo;
+    } else {
+      return grossPayTwo;
+    }
   }
 };
 
@@ -285,7 +321,9 @@ button.addEventListener('click', function () {
     calculateWage.pieChartFicaTaxes(wage, hours, hoursTwo).toFixed(2),
     calculateWage.pieChartFederalTax(wage, hours, hoursTwo).toFixed(2),
     calculateWage.pieChartStateTax(wage, hours, hoursTwo).toFixed(2),
-    calculateWage.pieChartOvertime(wage, hours, hoursTwo).toFixed(2)
+    calculateWage.pieChartOvertime(wage, hours, hoursTwo).toFixed(2),
+    calculateWage.pieChartWeekOne(wage, hours).toFixed(2),
+    calculateWage.pieChartWeekTwo(wage, hoursTwo).toFixed(2)
   ];
   //creating a pie chart when you hit the calculate button
   new Chart(ctx, {
@@ -296,7 +334,9 @@ button.addEventListener('click', function () {
         'Fica Taxes(Medicare,Social Security)',
         'Federal Tax',
         'State Tax',
-        'Overtime Pay'
+        'Overtime Pay',
+        'Week 1 Earnings',
+        'Week 2 Earnings'
       ],
       datasets: [
         {

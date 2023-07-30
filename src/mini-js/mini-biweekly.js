@@ -24,27 +24,27 @@ let e = {
       l = a * this.straightTime,
       m = a * s,
       y = a * r,
-      u = a * this.timeHalf,
-      n = (s - this.straightTime) * u + l,
-      g = (r - this.straightTime) * u + l,
-      T = document.getElementById('wage').value;
+      g = a * this.timeHalf,
+      T = (s - this.straightTime) * g + l,
+      u = (r - this.straightTime) * g + l,
+      h = document.getElementById('wage').value;
     this.federalTax =
-      T > 120 && T < 302
+      h > 120 && h < 302
         ? this.sixFederalTax
-        : T > 94.8 && T < 121
+        : h > 94.8 && h < 121
         ? this.fiveFederalTax
-        : T > 49.5 && T < 95.8
+        : h > 49.5 && h < 95.8
         ? this.fourFederalTax
-        : T > 23.3 && T < 50.5
+        : h > 23.3 && h < 50.5
         ? this.threeFederalTax
-        : T > 5.9 && T < 24.3
+        : h > 5.9 && h < 24.3
         ? this.twoFederalTax
         : this.oneFederalTax;
-    let d = 0,
-      h = 0;
-    (d = s > this.straightTime ? n : m), (h = r > this.straightTime ? g : y);
-    let p = d + h;
-    return p - p * i;
+    let n = 0,
+      p = 0;
+    (n = s > this.straightTime ? T : m), (p = r > this.straightTime ? u : y);
+    let d = n + p;
+    return d - d * i;
   },
   totalTaxes: function (e, t, o) {
     (employeeWage = e),
@@ -143,6 +143,31 @@ let e = {
       (r = employeeHoursTwo > this.straightTime ? a : 0),
       s + r
     );
+  },
+  pieChartWeekOne: function (e, t) {
+    return (
+      (employeeWage = e),
+      (employeeHours = t),
+      (grossPay = employeeWage * employeeHours),
+      (timeHalfWage = employeeWage * this.timeHalf),
+      (straightTimeGross = employeeWage * this.straightTime),
+      (overtimeGrossPay = (employeeHours - this.straightTime) * timeHalfWage),
+      (overtimePay = overtimeGrossPay + straightTimeGross),
+      employeeHours > this.straightTime ? overtimePay : grossPay
+    );
+  },
+  pieChartWeekTwo: function (e, t) {
+    return (
+      (employeeWage = e),
+      (employeeHoursTwo = t),
+      (grossPayTwo = employeeWage * employeeHoursTwo),
+      (timeHalfWage = employeeWage * this.timeHalf),
+      (straightTimeGross = employeeWage * this.straightTime),
+      (overtimeGrossPay =
+        (employeeHoursTwo - this.straightTime) * timeHalfWage),
+      (overtimePayTwo = overtimeGrossPay + straightTimeGross),
+      employeeHoursTwo > this.straightTime ? overtimePayTwo : grossPayTwo
+    );
   }
 };
 const t = document.getElementById('myChart');
@@ -158,28 +183,30 @@ let o = document.querySelector('#calButtons'),
   l = document.getElementById('graph-logo'),
   m = document.getElementById('earnings'),
   y = document.getElementById('taxes'),
-  u = document.getElementById('take-home');
+  g = document.getElementById('take-home');
 o.addEventListener('click', function () {
   let o = document.getElementById('wage').value,
-    n = document.getElementById('hours').value,
-    g = document.getElementById('hoursTwo').value;
+    T = document.getElementById('hours').value,
+    u = document.getElementById('hoursTwo').value;
   window.scrollTo({ top: 50, left: 50 }),
     l.classList.remove('display-none'),
     i.classList.add('display-none'),
     s.classList.add('display-none'),
     r.classList.remove('display-none'),
-    (a.innerHTML = '$' + e.biweeklyPayCalculator(o, n, g).toFixed(2)),
-    (a.innerHTML = '$' + e.biweeklyPayCalculator(o, n, g).toFixed(2)),
-    (m.innerHTML = 'Gross: $' + e.pieChartGross(o, n, g).toFixed(2) + ' |'),
-    (y.innerHTML = 'Taxes: -$' + e.totalTaxes(o, n, g).toFixed(2) + ' |'),
-    (u.innerHTML =
-      'Take Home: $' + e.biweeklyPayCalculator(o, n, g).toFixed(2));
-  const T = [
-    e.pieChartGross(o, n, g),
-    e.pieChartFicaTaxes(o, n, g).toFixed(2),
-    e.pieChartFederalTax(o, n, g).toFixed(2),
-    e.pieChartStateTax(o, n, g).toFixed(2),
-    e.pieChartOvertime(o, n, g).toFixed(2)
+    (a.innerHTML = '$' + e.biweeklyPayCalculator(o, T, u).toFixed(2)),
+    (a.innerHTML = '$' + e.biweeklyPayCalculator(o, T, u).toFixed(2)),
+    (m.innerHTML = 'Gross: $' + e.pieChartGross(o, T, u).toFixed(2) + ' |'),
+    (y.innerHTML = 'Taxes: -$' + e.totalTaxes(o, T, u).toFixed(2) + ' |'),
+    (g.innerHTML =
+      'Take Home: $' + e.biweeklyPayCalculator(o, T, u).toFixed(2));
+  const h = [
+    e.pieChartGross(o, T, u),
+    e.pieChartFicaTaxes(o, T, u).toFixed(2),
+    e.pieChartFederalTax(o, T, u).toFixed(2),
+    e.pieChartStateTax(o, T, u).toFixed(2),
+    e.pieChartOvertime(o, T, u).toFixed(2),
+    e.pieChartWeekOne(o, T).toFixed(2),
+    e.pieChartWeekTwo(o, u).toFixed(2)
   ];
   new Chart(t, {
     type: 'doughnut',
@@ -189,9 +216,11 @@ o.addEventListener('click', function () {
         'Fica Taxes(Medicare,Social Security)',
         'Federal Tax',
         'State Tax',
-        'Overtime Pay'
+        'Overtime Pay',
+        'Week 1 Earnings',
+        'Week 2 Earnings'
       ],
-      datasets: [{ data: T }]
+      datasets: [{ data: h }]
     },
     options: {
       responsive: !0,
