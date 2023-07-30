@@ -3,7 +3,7 @@ let calculateWage = {
   straightTime: 40,
   medicare: 1.45,
   socialSecurity: 6.2,
-  stateTax: 4.25,
+  stateTax: 6.04,
   oneFederalTax: 10,
   twoFederalTax: 12,
   threeFederalTax: 22,
