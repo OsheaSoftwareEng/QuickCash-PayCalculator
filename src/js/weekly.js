@@ -70,68 +70,6 @@ let calculateWage = {
       return grossPay * totalWithdrawals;
     }
   },
-  //biweekly pay calculator
-  // biweeklyPayCalculator: function (n, hr, hr2) {
-  //   employeeWage = n;
-  //   employeeHours = hr;
-  //   employeeHoursTwo = hr2;
-
-  //   withdrawals =
-  //     this.medicare + this.socialSecurity + this.stateTax + this.federalTax;
-  //   totalWithdrawals = withdrawals / 100;
-
-  //   straightTimeGross = employeeWage * this.straightTime;
-
-  //   grossPay = employeeWage * employeeHours;
-  //   grossPayTwo = employeeWage * employeeHoursTwo;
-
-  //   timeHalfWage = employeeWage * this.timeHalf;
-
-  //   overtimeGrossPay = (employeeHours - this.straightTime) * timeHalfWage;
-  //   overtimeGrossPayTwo = (employeeHoursTwo - this.straightTime) * timeHalfWage;
-
-  //   overtimePay = overtimeGrossPay + straightTimeGross;
-  //   overtimePayTwo = overtimeGrossPayTwo + straightTimeGross;
-
-  //   //Tax bracket conditional logic
-  //   let wage = document.getElementById('wage').value;
-  //   if (wage > 120 && wage < 302) {
-  //     this.federalTax = this.sixFederalTax;
-  //   } else if (wage > 94.8 && wage < 121) {
-  //     this.federalTax = this.fiveFederalTax;
-  //   } else if (wage > 49.5 && wage < 95.8) {
-  //     this.federalTax = this.fourFederalTax;
-  //   } else if (wage > 23.3 && wage < 50.5) {
-  //     this.federalTax = this.threeFederalTax;
-  //   } else if (wage > 5.9 && wage < 24.3) {
-  //     this.federalTax = this.twoFederalTax;
-  //   } else {
-  //     this.federalTax = this.oneFederalTax;
-  //   }
-
-  //   // let weekOneOvertime = overtimePay - overtimePay * totalWithdrawals;
-  //   // let weekOneGross = grossPay - grossPay * totalWithdrawals;
-  //   // let WeekTwoOverTime = overtimePay - overtimePay * totalWithdrawals;
-  //   // let weekTwoGross = grossPay - grossPay * totalWithdrawals;
-  //   let weekOne = 0;
-  //   let WeekTwo = 0;
-
-  //   //conditional for if hours go over 40 Week 1
-  //   if (employeeHours > this.straightTime) {
-  //     weekOne = overtimePay;
-  //   } else {
-  //     weekOne = grossPay;
-  //   }
-  //   //conditional for if hours go over 40 Week 2
-  //   if (employeeHoursTwo > this.straightTime) {
-  //     weekTwo = overtimePayTwo;
-  //   } else {
-  //     weekTwo = grossPayTwo;
-  //   }
-  //   let sumTotal = weekOne + weekTwo;
-  //   let netPay = sumTotal - sumTotal * totalWithdrawals;
-  //   return netPay;
-  // },
   //total taxes calculation
   totalTaxes: function (n, hr) {
     employeeWage = n;
