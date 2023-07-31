@@ -285,9 +285,14 @@ img {
     right: 0px;
   }
 
-  #calButtons {
+  /* #calButtons {
     position: relative;
     right: 13px;
+  } */
+
+  #calButtons {
+    position: relative;
+    right: 23px;
   }
 }
 
@@ -540,17 +545,17 @@ img {
     margin-left: -95px;
   }
   #graph-logo {
-    margin-left: -60px;
+    margin-left: -75px;
     margin-top: -25px;
     padding: 2px;
     position: relative;
     bottom: 65px;
   }
   #success-form {
-    margin-left: 30px;
+    margin-left: 13px;
     height: 645px;
     margin-top: -45px;
-    width: 320px;
+    width: 298px;
   }
   .chart-container {
     margin-left: -32px;
@@ -613,8 +618,8 @@ img {
 
 @media (max-width: 393px) {
   #success-form {
-    width: 295px;
-    margin-left: 18px;
+    width: 273px;
+    margin-left: 9px;
   }
 
   .logo {
@@ -623,6 +628,13 @@ img {
 
   .pay-break {
     margin-top: 52px;
+  }
+  #graph-logo {
+    margin-left: -88px;
+    margin-top: -25px;
+    padding: 2px;
+    position: relative;
+    bottom: 65px;
   }
 }
 
@@ -656,7 +668,7 @@ img {
   }
 
   #success-form {
-    margin-left: 14px;
+    margin-left: 5px;
     height: 665px;
     margin-top: -25px;
     width: 260px;
@@ -740,7 +752,7 @@ img {
     top: -230px;
   }
   .pay-break {
-    margin-top: 150px;
+    margin-top: 73px;
   }
   /* Media 320px */
 
