@@ -591,6 +591,8 @@ img {
 @media (max-width: 480px) {
   .logo {
     margin-left: -50px;
+    position: relative;
+    bottom: 10px;
   }
   .chart-container {
     margin-left: -50px;
