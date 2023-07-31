@@ -9,39 +9,41 @@
 </head>
 <body>
 	<!--regular logo and graph logo-->
-	<div class="section-div">
-		<div id="graph-logo" class="display-none">
-			<img src="./img/QuickPay-Logo.png">
-		</div>
-		<div id="original-logo" class="logo">
-			<img src="./img/QuickPay-Logo.png">
-		</div>
-		<!--Calculate page take home pay and results-->
-		<div class="display-none pay-amount" id="success-form">
-			<h1>Your Take Home</h1>
-			<p id="results-printed"></p>
-			<div class="chart-container">
-				<canvas id="myChart"></canvas>
+	<div class="overflow">
+		<div class="section-div">
+			<div id="graph-logo" class="display-none">
+				<img src="./img/QuickPay-Logo.png">
 			</div>
-			<div class="pay-break">
-				<div class="pay-items">
-					<span id="earnings"></span>
-					<span id="taxes"></span>
-					<span id="take-home"></span>
+			<div id="original-logo" class="logo">
+				<img src="./img/QuickPay-Logo.png">
+			</div>
+			<!--Calculate page take home pay and results-->
+			<div class="display-none pay-amount" id="success-form">
+				<h1>Your Take Home</h1>
+				<p id="results-printed"></p>
+				<div class="chart-container">
+					<canvas id="myChart"></canvas>
 				</div>
-				<button id="reset-button">Reset</button>
+				<div class="pay-break">
+					<div class="pay-items">
+						<span id="earnings"></span>
+						<span id="taxes"></span>
+						<span id="take-home"></span>
+					</div>
+					<button id="reset-button">Reset</button>
+				</div>
 			</div>
-		</div>
 
-		<!--Pay form for user to enter in payment details-->
-		<div id="pay-form">
-			<h2 class="header">Weekly Pay </br> Calculator</h2>
-			<div class="form">
-				<p class="header-text">Pay Rate</p>
-				<input id="wage" type="text" name="wage" placeholder="Enter Hourly Wage"></input>
-				<p class="header-text">Hours</p>
-				<input id="hours" type="text" name="hours" placeholder="Enter Hours Worked"></input>
-				<button id="calButton">Calculate</button>
+			<!--Pay form for user to enter in payment details-->
+			<div id="pay-form">
+				<h2 class="header">Weekly Pay </br> Calculator</h2>
+				<div class="form">
+					<p class="header-text">Pay Rate</p>
+					<input id="wage" type="text" name="wage" placeholder="Enter Hourly Wage"></input>
+					<p class="header-text">Hours</p>
+					<input id="hours" type="text" name="hours" placeholder="Enter Hours Worked"></input>
+					<button id="calButton">Calculate</button>
+				</div>
 			</div>
 		</div>
 	</div>
