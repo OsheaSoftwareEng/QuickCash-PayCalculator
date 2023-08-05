@@ -7,10 +7,6 @@
 
 /*Generic styles*/
 
-html {
-  overflow-y: hidden;
-}
-
 p {
   position: relative;
   bottom: 45px;
@@ -529,6 +525,14 @@ img {
 /*Media 480px */
 
 @media (max-width: 480px) {
+  body {
+    height: 770px;
+  }
+
+  html {
+    overflow: hidden;
+  }
+
   .logo {
     margin-left: -50px;
   }
