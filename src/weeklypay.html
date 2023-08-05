@@ -39,16 +39,18 @@
 				<h2 class="header">Weekly Pay </br> Calculator</h2>
 				<div class="form">
 					<p class="header-text">Pay Rate</p>
-					<input id="wage" type="number" name="wage" placeholder="Enter Hourly Wage"></input>
+					<input id="wage" type="number" name="wage" onkeypress="return isNumberKey(event)"
+						placeholder="Enter Hourly Wage"></input>
 					<p class="header-text">Hours</p>
-					<input id="hours" type="number" name="hours" placeholder="Enter Hours Worked"></input>
+					<input id="hours" type="number" name="hours" onkeypress="return isNumberKey(event)"
+						placeholder="Enter Hours Worked"></input>
 					<button id="calButton">Calculate</button>
 				</div>
 			</div>
 		</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script src="./mini-js/mini-weekly.js"></script>
+	<script src="./js/weekly.js"></script>
 	<!-- <script src="js/tota11y.min.js"></script> -->
 
 </body>
