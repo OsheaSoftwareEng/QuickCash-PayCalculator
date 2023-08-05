@@ -25,7 +25,6 @@ body {
 
 .overflow {
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 h1 {
@@ -166,7 +165,7 @@ img {
 .section-div {
   position: absolute;
   position: relative;
-  bottom: 40px;
+  bottom: 94px;
 }
 
 /*styles for heading results*/
