@@ -39,7 +39,8 @@
 				<h2 class="header">Salary Pay </br> Biweekly Calculator</h2>
 				<div class="form">
 					<p class="header-text">Pay Rate</p>
-					<input id="wage" type="number" name="wage" placeholder="Enter Annual Salary EG. 150200"></input>
+					<input id="wage" type="number" name="wage" onkeypress="return isNumberKey(event)"
+						placeholder="Enter Annual Salary EG. 150200"></input>
 					<button id="calButton">Calculate</button>
 				</div>
 			</div>
