@@ -109,7 +109,7 @@ img {
   margin-bottom: 18px;
 }
 
-#pay-form input[type='text'] {
+#pay-form input[type='number'] {
   display: block;
   height: 32px;
   padding: 6px 16px;
