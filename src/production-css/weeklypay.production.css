@@ -465,6 +465,19 @@ img {
 /*Media 480px */
 
 @media (max-width: 480px) {
+  body {
+    height: 770px;
+  }
+
+  html {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .section-div {
+    height: 745px;
+  }
+
   .logo {
     margin-left: -50px;
   }
