@@ -7,6 +7,10 @@
 
 /*Generic styles*/
 
+html {
+  overflow-y: hidden;
+}
+
 p {
   position: relative;
   bottom: 45px;
