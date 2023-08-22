@@ -3,31 +3,31 @@
 	"name": "QuickPay Pay Calculator",
 	"icons": [
 	  {
-		"src": "QuickPay-Logo48x48.jpg",
+		"src": "QuickPay-Logo48x48.png",
 		"sizes": "48x48",
 		"type": "image/x-icon",
 		"purpose": "maskable"
 	  },
 	  {
-		"src": "QuickPay-Logo144x144.jpg",
+		"src": "QuickPay-Logo144x144.png",
 		"type": "image/png",
 		"sizes": "144x144",
 		"purpose": "any"
 	  },
 	  {
-		"src": "QuickPay-Logo192x192.jpg",
+		"src": "QuickPay-Logo192x192.png",
 		"type": "image/png",
 		"sizes": "192x192",
 		"purpose": "maskable"
 	  },
 	  {
-		"src": "QuickPay-Logo512x512.jpg",
+		"src": "QuickPay-Logo512x512.png",
 		"type": "image/png",
 		"sizes": "512x512",
 		"purpose": "maskable"
 	  }
 	],
-	"start_url": "/",
+	"start_url": "https://www.quickpaypc.com",
 	"display": "standalone",
 	"theme_color": "#000000",
 	"background_color": "#051726"

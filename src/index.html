@@ -7,7 +7,10 @@
 	<link rel="shortcut icon" href="../public/quick-pay-logo.png">
 	<link rel="stylesheet" href="./production-css/index.production.css">
 	<meta name="theme-color" content="#000000" />
-	<link rel="apple-touch-icon" href="%PUBLIC_URL%/QuickPay-Logo192x192.jpg" />
+	<link rel="apple-touch-icon" href="%PUBLIC_URL%/QuickPay-Logo48x48.png" />
+	<link rel="apple-touch-icon" href="%PUBLIC_URL%/QuickPay-Logo144x144.png" />
+	<link rel="apple-touch-icon" href="%PUBLIC_URL%/QuickPay-Logo192x192.png" />
+	<link rel="apple-touch-icon" href="%PUBLIC_URL%/QuickPay-Logo512x512.png" />
 	<link rel="manifest" href="../public/manifest.json" />
 	<title>QuickPay Pay-Calculator</title>
 </head>
@@ -43,6 +46,14 @@
 			</div>
 		</div>
 	</div>
-	<!-- <script src="js/tota11y.min.js"></script> -->
+	<script>
+		// Initialize the service worker
+		navigator.serviceWorker.register('sw.js');
+		console.log(navigator.serviceWorker);
+		// Initialize the service worker
+		if (navigator && navigator.serviceWorker) {
+			navigator.serviceWorker.register('sw.js');
+		}
+	</script>
 </body>
 </html>
