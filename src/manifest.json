@@ -29,7 +29,9 @@
 	],
 	"start_url": "quickpaypc.com",
 	"display": "standalone",
-	"theme_color": "#000000",
+	"theme_color": "##051726",
 	"background_color": "#ffffff"
+
+	
   }
   
