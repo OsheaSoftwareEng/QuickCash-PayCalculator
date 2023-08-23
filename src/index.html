@@ -18,6 +18,7 @@
 	<link href="img/QuickPay-Logo_1242.png" sizes="1242x2208" rel="apple-touch-startup-image" />
 	<link href="img/QuickPay-Logo_750.png" sizes="750x1334" rel="apple-touch-startup-image" />
 	<link href="img/QuickPay-Logo_640.png" sizes="640x1136" rel="apple-touch-startup-image" />
+	<link href="img/QuickPay-Logo_320.png" sizes="320x639" rel="apple-touch-startup-image" />
 
 	<link rel="manifest" href="manifest.json" />
 	<title>QuickPay Pay-Calculator</title>
@@ -61,19 +62,6 @@
 		// Initialize the service worker
 		if (navigator && navigator.serviceWorker) {
 			navigator.serviceWorker.register('sw.js');
-		}
-
-		// Detects if device is on iOS 
-		const isIos = () => {
-			const userAgent = window.navigator.userAgent.toLowerCase();
-			return /iphone|ipad|ipod/.test(userAgent);
-		}
-		// Detects if device is in standalone mode
-		const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
-
-		// Checks if should display install popup notification:
-		if (isIos() && !isInStandaloneMode()) {
-			return ({ showInstallMessage: true });
 		}
 	</script>
 </body>
