@@ -21,7 +21,7 @@
 		"purpose": "maskable"
 	  },
 	  {
-		"src": "img/QuickPay-Logo512xx512.png",
+		"src": "img/QuickPay-Logo512x.png",
 		"type": "image/png",
 		"sizes": "512x512",
 		"purpose": "maskable"
@@ -30,6 +30,6 @@
 	"start_url": "quickpaypc.com",
 	"display": "standalone",
 	"theme_color": "#000000",
-	"background_color": "#051726"
+	"background_color": "#ffffff"
   }
   
