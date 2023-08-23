@@ -5,11 +5,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="icon" href="./img/QuickPay-Logo192x192.ico" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="../public/quick-pay-logo.png">
+	<link rel="shortcut icon" href="img/QuickPay-Logo.png">
 	<link rel="stylesheet" href="./production-css/index.production.css">
 	<meta name="theme-color" content="#000000" />
 	<link rel="apple-touch-icon" href="img/QuickPay-Logo192x192.png" />
 	<link rel="apple-touch-icon" href="img/QuickPay-Logo512x512.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link href="img/QuickPay-Logo_2048.png" sizes="2048x2732" rel="apple-touch-startup-image" />
+	<link href="img/QuickPay-Logo_1668.png" sizes="1668x2224" rel="apple-touch-startup-image" />
+	<link href="img/QuickPay-Logo_1536.png" sizes="1536x2048" rel="apple-touch-startup-image" />
+	<link href="img/QuickPay-Logo_1125.png" sizes="1125x2436" rel="apple-touch-startup-image" />
+	<link href="img/QuickPay-Logo_1242.png" sizes="1242x2208" rel="apple-touch-startup-image" />
+	<link href="img/QuickPay-Logo_750.png" sizes="750x1334" rel="apple-touch-startup-image" />
+	<link href="img/QuickPay-Logo_640.png" sizes="640x1136" rel="apple-touch-startup-image" />
+
 	<link rel="manifest" href="manifest.json" />
 	<title>QuickPay Pay-Calculator</title>
 </head>
@@ -52,6 +61,19 @@
 		// Initialize the service worker
 		if (navigator && navigator.serviceWorker) {
 			navigator.serviceWorker.register('sw.js');
+		}
+
+		// Detects if device is on iOS 
+		const isIos = () => {
+			const userAgent = window.navigator.userAgent.toLowerCase();
+			return /iphone|ipad|ipod/.test(userAgent);
+		}
+		// Detects if device is in standalone mode
+		const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+		// Checks if should display install popup notification:
+		if (isIos() && !isInStandaloneMode()) {
+			alert({ showInstallMessage: true });
 		}
 	</script>
 </body>
